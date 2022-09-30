@@ -594,7 +594,7 @@ dependencies = [
  "bytesize",
  "cargo-platform",
  "cargo-util",
- "clap",
+ "clap 3.2.17",
  "crates-io",
  "crossbeam-utils",
  "curl",
@@ -738,7 +738,7 @@ dependencies = [
  "atty",
  "bitflags",
  "clap_derive",
- "clap_lex",
+ "clap_lex 0.2.4",
  "indexmap",
  "once_cell",
  "strsim",
@@ -747,12 +747,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "clap_complete"
-version = "3.2.4"
+name = "clap"
+version = "4.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4179da71abd56c26b54dd0c248cc081c1f43b0a1a7e8448e28e57a29baa993d"
+checksum = "7f78ad8e84aa8e8aa3e821857be40eb4b925ff232de430d4dd2ae6aa058cbd92"
 dependencies = [
- "clap",
+ "bitflags",
+ "clap_lex 0.3.0",
+]
+
+[[package]]
+name = "clap_complete"
+version = "4.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "11cba7abac9b56dfe2f035098cdb3a43946f276e6db83b72c4e692343f9aab9a"
+dependencies = [
+ "clap 4.0.4",
 ]
 
 [[package]]
@@ -773,6 +783,15 @@ name = "clap_lex"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
+dependencies = [
+ "os_str_bytes",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
 dependencies = [
  "os_str_bytes",
 ]
@@ -1662,7 +1681,7 @@ name = "fluvio-channel"
 version = "0.0.0"
 dependencies = [
  "cfg-if",
- "clap",
+ "clap 3.2.17",
  "color-eyre",
  "dirs",
  "fluvio-types",
@@ -1679,7 +1698,7 @@ version = "0.0.0"
 dependencies = [
  "assert_cmd",
  "cfg-if",
- "clap",
+ "clap 3.2.17",
  "color-eyre",
  "colored",
  "dirs",
@@ -1700,7 +1719,7 @@ dependencies = [
  "async-trait",
  "atty",
  "bytesize",
- "clap",
+ "clap 3.2.17",
  "clap_complete",
  "color-eyre",
  "colored",
@@ -1780,7 +1799,7 @@ dependencies = [
  "async-channel",
  "async-trait",
  "chrono",
- "clap",
+ "clap 3.2.17",
  "color-eyre",
  "colored",
  "comfy-table",
@@ -1880,7 +1899,7 @@ name = "fluvio-extension-common"
 version = "0.9.0"
 dependencies = [
  "async-trait",
- "clap",
+ "clap 3.2.17",
  "comfy-table",
  "fluvio",
  "fluvio-package-index",
@@ -2013,7 +2032,7 @@ dependencies = [
 name = "fluvio-run"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 3.2.17",
  "fluvio-extension-common",
  "fluvio-future 0.4.2",
  "fluvio-sc",
@@ -2034,7 +2053,7 @@ dependencies = [
  "async-trait",
  "base64",
  "cfg-if",
- "clap",
+ "clap 3.2.17",
  "event-listener",
  "fluvio-auth",
  "fluvio-controlplane",
@@ -2190,7 +2209,7 @@ dependencies = [
  "async-trait",
  "bytes 1.2.1",
  "cfg-if",
- "clap",
+ "clap 3.2.17",
  "derive_builder",
  "event-listener",
  "flate2",
@@ -2251,7 +2270,7 @@ dependencies = [
  "async-trait",
  "blocking",
  "bytes 1.2.1",
- "clap",
+ "clap 3.2.17",
  "derive_builder",
  "fluvio-controlplane-metadata",
  "fluvio-future 0.4.2",
@@ -2315,7 +2334,7 @@ dependencies = [
  "async-std",
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 3.2.17",
  "comfy-table",
  "crc",
  "crossbeam-channel",
@@ -2363,7 +2382,7 @@ dependencies = [
 name = "fluvio-test-derive"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 3.2.17",
  "crossbeam-channel",
  "fluvio",
  "fluvio-future 0.4.2",
@@ -2398,7 +2417,7 @@ version = "0.0.0"
 dependencies = [
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 3.2.17",
  "comfy-table",
  "dyn-clone",
  "fluvio",
