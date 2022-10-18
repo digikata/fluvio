@@ -594,7 +594,7 @@ dependencies = [
  "bytesize",
  "cargo-platform",
  "cargo-util",
- "clap",
+ "clap 3.2.22",
  "crates-io",
  "crossbeam-utils",
  "curl",
@@ -731,19 +731,29 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "3.2.17"
+version = "3.2.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "29e724a68d9319343bb3328c9cc2dfde263f4b3142ee1059a9980580171c954b"
+checksum = "86447ad904c7fb335a790c9d7fe3d0d971dc523b8ccd1561a520de9a85302750"
 dependencies = [
  "atty",
  "bitflags",
- "clap_derive",
- "clap_lex",
+ "clap_lex 0.2.4",
  "indexmap",
- "once_cell",
  "strsim",
  "termcolor",
  "textwrap",
+]
+
+[[package]]
+name = "clap"
+version = "4.0.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ef582e2c00a63a0c0aa1fb4a4870781c4f5729f51196d3537fa7c1c1992eaa3"
+dependencies = [
+ "bitflags",
+ "clap_derive",
+ "clap_lex 0.3.0",
+ "once_cell",
 ]
 
 [[package]]
@@ -752,14 +762,14 @@ version = "3.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e4179da71abd56c26b54dd0c248cc081c1f43b0a1a7e8448e28e57a29baa993d"
 dependencies = [
- "clap",
+ "clap 3.2.22",
 ]
 
 [[package]]
 name = "clap_derive"
-version = "3.2.17"
+version = "4.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "13547f7012c01ab4a0e8f8967730ada8f9fdf419e8b6c792788f39cf4e46eefa"
+checksum = "c42f169caba89a7d512b5418b09864543eeb4d497416c917d7137863bd2076ad"
 dependencies = [
  "heck",
  "proc-macro-error",
@@ -773,6 +783,15 @@ name = "clap_lex"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
+dependencies = [
+ "os_str_bytes",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
 dependencies = [
  "os_str_bytes",
 ]
@@ -1662,7 +1681,7 @@ name = "fluvio-channel"
 version = "0.0.0"
 dependencies = [
  "cfg-if",
- "clap",
+ "clap 4.0.16",
  "color-eyre",
  "dirs",
  "fluvio-types",
@@ -1679,7 +1698,7 @@ version = "0.0.0"
 dependencies = [
  "assert_cmd",
  "cfg-if",
- "clap",
+ "clap 4.0.16",
  "color-eyre",
  "colored",
  "dirs",
@@ -1700,7 +1719,7 @@ dependencies = [
  "async-trait",
  "atty",
  "bytesize",
- "clap",
+ "clap 4.0.16",
  "clap_complete",
  "color-eyre",
  "colored",
@@ -1780,7 +1799,7 @@ dependencies = [
  "async-channel",
  "async-trait",
  "chrono",
- "clap",
+ "clap 4.0.16",
  "color-eyre",
  "colored",
  "comfy-table",
@@ -1880,7 +1899,7 @@ name = "fluvio-extension-common"
 version = "0.9.0"
 dependencies = [
  "async-trait",
- "clap",
+ "clap 4.0.16",
  "comfy-table",
  "fluvio",
  "fluvio-package-index",
@@ -2013,7 +2032,7 @@ dependencies = [
 name = "fluvio-run"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 4.0.16",
  "fluvio-extension-common",
  "fluvio-future 0.4.2",
  "fluvio-sc",
@@ -2034,7 +2053,7 @@ dependencies = [
  "async-trait",
  "base64",
  "cfg-if",
- "clap",
+ "clap 4.0.16",
  "event-listener",
  "fluvio-auth",
  "fluvio-controlplane",
@@ -2190,7 +2209,7 @@ dependencies = [
  "async-trait",
  "bytes 1.2.1",
  "cfg-if",
- "clap",
+ "clap 4.0.16",
  "derive_builder",
  "event-listener",
  "flate2",
@@ -2251,7 +2270,7 @@ dependencies = [
  "async-trait",
  "blocking",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.16",
  "derive_builder",
  "fluvio-controlplane-metadata",
  "fluvio-future 0.4.2",
@@ -2315,7 +2334,7 @@ dependencies = [
  "async-std",
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.16",
  "comfy-table",
  "crc",
  "crossbeam-channel",
@@ -2363,7 +2382,7 @@ dependencies = [
 name = "fluvio-test-derive"
 version = "0.0.0"
 dependencies = [
- "clap",
+ "clap 4.0.16",
  "crossbeam-channel",
  "fluvio",
  "fluvio-future 0.4.2",
@@ -2398,7 +2417,7 @@ version = "0.0.0"
 dependencies = [
  "async-trait",
  "bytes 1.2.1",
- "clap",
+ "clap 4.0.16",
  "comfy-table",
  "dyn-clone",
  "fluvio",
@@ -4887,9 +4906,9 @@ checksum = "507e9898683b6c43a9aa55b64259b721b52ba226e0f3779137e50ad114a4c90b"
 
 [[package]]
 name = "textwrap"
-version = "0.15.0"
+version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1141d4d61095b28419e22cb0bbf02755f5e54e0526f97f1e3d1d160e60885fb"
+checksum = "949517c0cf1bf4ee812e2e07e08ab448e3ae0d23472aee8a06c985f0c8815b16"
 
 [[package]]
 name = "thiserror"
