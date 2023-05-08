@@ -13,7 +13,7 @@ publish = false
 tracing = { workspace = true }
 bytes = { workspace = true }
 nix = { workspace = true }
-futures-lite = "1.11.0"
+futures-lite = "1.13.0"
 futures = "0.3"
 clap = { workspace = true , features = [
     "std",
