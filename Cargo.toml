@@ -76,7 +76,7 @@ cfg-if = "1.0.0"
 chrono = { version = "0.4.23", default-feature = false }
 clap = { version = "4.0.10", default-features = false }
 color-eyre = { version = "0.6.0", default-features = false }
-colored = "2.0.0"
+colored = "2.1.0"
 crc32c = { version = "0.6"}
 comfy-table = { version = "6.1.0", default-features = false }
 convert_case = "0.6.0"
