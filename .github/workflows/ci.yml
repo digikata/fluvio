@@ -1026,7 +1026,7 @@ jobs:
       # Run fluvio test
       - name: Run Fluvio CLI smoke tests
         if: matrix.test == 'fluvio'
-        uses: nick-fields/retry@v2
+        uses: nick-fields/retry@v3
         with:
           timeout_minutes: 15
           max_attempts: 3
