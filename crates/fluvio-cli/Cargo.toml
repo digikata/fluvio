@@ -56,7 +56,7 @@ comfy-table = "6.0.0"
 atty = { version = "0.2.14", optional = true }
 ctrlc = { version = "3.1.3", optional = true }
 colored = "2"
-handlebars = "4"
+handlebars = "5"
 content_inspector = { version = "0.2.4", optional = true }
 flate2 = { workspace = true }
 crossterm = { version = "0.26.0", features = ['event-stream']}
